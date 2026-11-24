@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>PetShield Dispatch™ | 24/7 Pet Emergency Triage & Smart Case Routing ($1.99/mo)</title>
+<meta name="description" content="2:00 AM pet scare? Know within 60 seconds if your dog or cat needs an emergency vet or can safely wait until morning. Guided symptom triage, instant urgency scoring, and clinic-ready Emergency Case Packets starting at $1.99/month."/>
+<meta name="keywords" content="24 hour pet triage online, emergency vet near me, dog vomiting lethargy emergency signs, cat hiding emergency symptoms, pet emergency case packet, PetShield Dispatch"/>
+<meta name="robots" content="index, follow"/>
+<meta name="theme-color" content="#05080f"/>
+<meta property="og:title" content="PetShield Dispatch™ — Fast Triage, Smart Data, Real Protection"/>
+<meta property="og:description" content="24/7 guided pet symptom triage, instant urgency scoring, and clinic-ready Emergency Case Packets starting at $1.99/mo."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','system-ui','sans-serif'],display:['Plus Jakarta Sans','Inter','sans-serif'],mono:['JetBrains Mono','ui-monospace','monospace']},colors:{obsidian:'#05080f',navy:'#0b1220',slatecard:'#111a2c',slateborder:'#1f2d47',cyanbrand:'#06b6d4',amberbrand:'#f59e0b'}}}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"SoftwareApplication","name":"PetShield Dispatch","applicationCategory":"HealthApplication","operatingSystem":"Web, iOS, Android","description":"Software-first 24/7 pet emergency symptom triage, urgency scoring, and encrypted Emergency Case Packet routing for dog and cat owners.","offers":[{"@type":"Offer","name":"2 AM Pet Emergency Readiness Checklist","price":"0.00","priceCurrency":"USD"},{"@type":"Offer","name":"Digital Triage Pass","price":"1.99","priceCurrency":"USD","billingIncrement":"P1M"},{"@type":"Offer","name":"Optional Automated Veterinary Consult (Standard / Urgent)","price":"49.00","priceCurrency":"USD"}]},{"@type":"HowTo","name":"How to Triage a Pet Emergency in 60 Seconds with PetShield Dispatch","description":"Structured 3-step pet emergency intake and clinic handoff workflow.","step":[{"@type":"HowToStep","position":1,"name":"Guided Symptom & Urgency Intake","text":"Select your pet's species, weight, and active symptoms using plain-language clinical red-flag prompts."},{"@type":"HowToStep","position":2,"name":"Instant Urgency Score & Emergency Case Packet","text":"Receive a clear urgency flag (Monitor at Home, Schedule Vet Visit, or Immediate ER Attention) and an encrypted Emergency Case Packet."},{"@type":"HowToStep","position":3,"name":"Actionable Next Steps or Clinic Handoff","text":"Route your structured packet to a participating partner clinic via an optional $49/$79 automated consult or present it directly at any 24/7 emergency vet hospital."}]},{"@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I know if my dog or cat needs an emergency vet right now?","acceptedAnswer":{"@type":"Answer","text":"Immediate emergency indicators include labored breathing, pale or blue gums, repeated unproductive retching, collapse, seizures, severe bleeding, inability to urinate, or suspected toxin ingestion. PetShield Dispatch guides you through red-flag symptom checks in 60 seconds to classify urgency and prepare an Emergency Case Packet."}},{"@type":"Question","name":"Why is the Digital Triage Pass only $1.99/month?","acceptedAnswer":{"@type":"Answer","text":"Your $1.99/month Digital Triage Pass keeps your pet's emergency profile, 24/7 guided symptom triage, and instant Emergency Case Packet generator active around the clock without expensive hardware. Optional on-demand automated veterinary consults ($49 standard or $79 urgent) are only billed if you choose to escalate a case."}},{"@type":"Question","name":"What is an Emergency Case Packet and can any vet use it?","acceptedAnswer":{"@type":"Answer","text":"An Emergency Case Packet is a concise, structured clinical brief containing your pet's profile, weight, symptom timeline, urgency flag, and media notes. It routes directly to PetShield partner clinics or can be copied and shown at any 24/7 emergency veterinary hospital."}},{"@type":"Question","name":"Does PetShield Dispatch replace my veterinarian?","acceptedAnswer":{"@type":"Answer","text":"No. PetShield Dispatch provides structured symptom triage, urgency scoring, and emergency data sharing to speed up veterinary intake. It does not issue medical diagnoses and never replaces licensed veterinary care."}},{"@type":"Question","name":"How do the $49 and $79 automated consults work?","acceptedAnswer":{"@type":"Answer","text":"When you want clinical eyes on your triage summary without rushing straight to an ER waiting room, you can optionally submit your Emergency Case Packet for an asynchronous, AI-assisted veterinary intake review ($49 standard / $79 urgent) routed to a participating partner clinic."}}]}]}</script>
+<style type="text/tailwindcss">
+@layer base{html{background:#05080f}body{background:#05080f}:focus-visible{outline:2px solid #22d3ee;outline-offset:3px;border-radius:12px}}
+@layer components{
+.card{@apply relative overflow-hidden rounded-3xl border border-white/10 bg-slatecard/60 p-6 sm:p-7 backdrop-blur-xl transition duration-300 hover:border-cyan-400/40}
+.spot::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(420px circle at var(--x,50%) var(--y,50%),rgba(6,182,212,.16),transparent 60%)}
+.spot:hover::before{opacity:1}
+.btn-p{@apply inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-cyan-500 to-cyan-300 font-display font-extrabold text-obsidian shadow-lg shadow-cyan-500/30 transition cursor-pointer hover:-translate-y-0.5 hover:shadow-cyan-400/50 active:scale-[.98]}
+.btn-a{@apply inline-flex items-center justify-center gap-2 rounded-2xl bg-gradient-to-r from-amber-400 to-amber-300 font-display font-extrabold text-obsidian transition cursor-pointer hover:-translate-y-0.5 active:scale-[.98]}
+.btn-g{@apply inline-flex items-center justify-center gap-2 rounded-2xl border border-white/15 bg-white/5 font-bold text-white transition cursor-pointer hover:border-cyan-400/60 active:scale-[.98]}
+.eb{@apply text-sm font-semibold text-cyan-400}
+.h2{@apply font-display font-extrabold text-3xl sm:text-5xl text-white tracking-tight leading-[1.1]}
+.inp{@apply w-full rounded-xl border border-slateborder bg-navy px-3.5 py-2.5 text-sm text-white focus:outline-none focus:border-cyan-400}
+.lbl{@apply block text-xs font-semibold text-slate-300 mb-1}
+.sb{@apply rounded-xl border border-slateborder bg-navy p-3 text-left text-xs font-semibold text-slate-300 transition cursor-pointer hover:border-slate-500}
+.sb.on{@apply border-cyan-400 bg-cyan-500/15 text-white}
+.li{@apply flex items-start gap-2.5}
+.mdl{@apply hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-md items-center justify-center p-4 overflow-y-auto}
+.mdl.open{@apply flex}
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+}
+.au{position:absolute;border-radius:9999px;filter:blur(90px);opacity:.5;animation:fl 14s ease-in-out infinite alternate}
+@keyframes fl{to{transform:translate(60px,40px) scale(1.15)}}
+.mq{display:flex;width:max-content;animation:mq 38s linear infinite}
+@keyframes mq{to{transform:translateX(-50%)}}
+.ring{animation:rg 2.4s ease-out infinite}
+@keyframes rg{0%{box-shadow:0 0 0 0 rgba(245,158,11,.5)}100%{box-shadow:0 0 0 14px rgba(245,158,11,0)}}
+.grid-bg{background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px);background-size:56px 56px;-webkit-mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 70%);mask-image:radial-gradient(ellipse at 50% 30%,#000 20%,transparent 70%)}
+.gt{background:linear-gradient(90deg,#22d3ee,#fcd34d,#22d3ee);background-size:200% auto;-webkit-background-clip:text;background-clip:text;color:transparent;animation:gs 6s linear infinite}
+@keyframes gs{to{background-position:200% center}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body class="font-sans text-slate-100 antialiased selection:bg-cyan-500/30 selection:text-cyan-100">
+
+<div class="border-b border-white/10 bg-navy px-4 py-2 text-center text-xs text-slate-300">
+  <span class="font-semibold text-amber-400">⚠ Critical Life-Threatening Emergency?</span>
+  <span class="ml-1 text-slate-400">If your pet is unconscious, bleeding heavily, or struggling to breathe, proceed immediately to your nearest 24/7 ER vet hospital.</span>
+</div>
+
+<header class="sticky top-3 z-40 px-3 mt-3">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 rounded-2xl border border-white/10 bg-obsidian/70 px-3 sm:px-5 backdrop-blur-xl shadow-2xl shadow-black/40">
+    <a href="#top" onclick="switchView('b2c')" class="flex items-center gap-3">
+      <span class="flex h-10 w-10 items-center justify-center rounded-xl border border-amber-400/50 bg-gradient-to-br from-amber-400/20 to-cyan-500/20">
+        <svg class="h-6 w-6 text-amber-400" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path stroke-linecap="round" stroke-linejoin="round" d="M12 2.5l7.5 3.2v5.8c0 5.1-3.2 9.4-7.5 10.9-4.3-1.5-7.5-5.8-7.5-10.9V5.7L12 2.5z"/><circle cx="9.5" cy="9.5" r="1" fill="currentColor" stroke="none"/><circle cx="14.5" cy="9.5" r="1" fill="currentColor" stroke="none"/><circle cx="8" cy="12" r=".9" fill="currentColor" stroke="none"/><circle cx="16" cy="12" r=".9" fill="currentColor" stroke="none"/><path d="M12 11.2c-1.5 0-2.6 1.1-2.6 2.3 0 .8.6 1.3 1.3 1.3.5 0 .9-.2 1.3-.2s.8.2 1.3.2c.7 0 1.3-.5 1.3-1.3 0-1.2-1.1-2.3-2.6-2.3z" fill="currentColor" stroke="none"/></svg>
+      </span>
+      <span class="font-display text-base font-extrabold leading-none text-white sm:text-lg">PetShield <span class="text-cyan-400">Dispatch™</span><span class="mt-1 hidden text-[10px] font-semibold text-amber-400/90 sm:block">Pet safety • Smart triage • Rapid response</span></span>
+    </a>
+    <nav id="b2cNavLinks" class="hidden items-center gap-7 text-sm font-medium text-slate-300 lg:flex">
+      <a href="#how-it-works" class="transition hover:text-cyan-400">How It Works</a>
+      <a href="#case-packet" class="transition hover:text-cyan-400">Case Packet</a>
+      <a href="#pricing" class="transition hover:text-cyan-400">Pricing</a>
+      <a href="#faq" class="transition hover:text-cyan-400">FAQ</a>
+    </nav>
+    <div class="flex items-center gap-2">
+      <button id="viewToggleBtn" onclick="toggleAudienceView()" class="btn-g px-3 py-2 text-xs sm:text-sm">For Veterinary Clinics</button>
+      <button onclick="openTriageModal()" class="btn-p px-3.5 py-2.5 text-xs sm:px-5 sm:text-sm">Start Guided Triage</button>
+    </div>
+  </div>
+</header>
+
+<main id="b2cView">
+<!-- HERO -->
+<section id="top" class="relative overflow-hidden">
+  <div class="grid-bg absolute inset-0"></div>
+  <div class="au -left-20 top-0 h-96 w-96 bg-cyan-500/40"></div>
+  <div class="au right-0 top-32 h-80 w-80 bg-amber-400/25" style="animation-delay:-5s"></div>
+  <div class="relative mx-auto max-w-7xl px-4 pb-20 pt-14 sm:px-6 sm:pt-20 lg:px-8">
+    <div class="grid items-center gap-12 lg:grid-cols-12">
+      <div class="space-y-7 lg:col-span-7">
+        <div class="inline-flex items-center gap-2 rounded-full border border-amber-400/40 bg-white/5 px-4 py-1.5 text-xs font-semibold text-amber-300 backdrop-blur">
+          <span class="h-2 w-2 animate-pulse rounded-full bg-amber-400"></span>Fast triage • Smart data • Real protection
+        </div>
+        <h1 class="font-display text-4xl font-extrabold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-[4rem]">
+          2:00 AM Pet Scare? Know Within <span class="gt">60 Seconds</span> If It’s an ER Emergency—or Safe to Wait Until Morning.
+        </h1>
+        <p class="max-w-2xl text-base leading-relaxed text-slate-300 sm:text-lg">
+          Stop panicking over conflicting search results. Get 24/7 guided symptom triage, instant urgency scoring, and a clinic-ready <strong class="text-white">Emergency Case Packet</strong> you can share with local partner vets or any emergency hospital—starting at <strong class="text-cyan-400">$1.99/month</strong>.
+        </p>
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <button onclick="openTriageModal()" class="btn-p px-6 py-4 text-base sm:text-lg">Activate My $1.99/mo Digital Triage Pass <svg class="h-5 w-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/></svg></button>
+        </div>
+        <button onclick="openChecklistModal()" class="py-1 text-sm font-semibold text-amber-400 underline decoration-amber-400/50 underline-offset-4 transition hover:text-amber-300 cursor-pointer">Not an emergency? Get the Free 2 AM Readiness Checklist →</button>
+        <div class="grid grid-cols-2 gap-3 border-t border-white/10 pt-5 text-xs font-medium text-slate-300 sm:grid-cols-4">
+          <div class="li">✓ <span>No Hardware Required</span></div><div class="li">✓ <span>Works With Any ER Vet</span></div><div class="li">✓ <span>Encrypted Case Handoff</span></div><div class="li">✓ <span>Cancel Anytime</span></div>
+        </div>
+      </div>
+
+      <!-- SIMULATOR -->
+      <div class="lg:col-span-5">
+        <div class="spot card !p-5 shadow-2xl shadow-cyan-500/10 sm:!p-7" style="background:linear-gradient(160deg,rgba(17,26,44,.9),rgba(8,12,20,.9))">
+          <div class="mb-4 flex items-center justify-between border-b border-white/10 pb-4">
+            <div><span class="text-xs font-semibold text-cyan-400">Live interactive preview</span><h2 class="font-display text-lg font-bold text-white">60-Second Triage Simulator</h2></div>
+            <span class="rounded-lg border border-slateborder bg-navy px-2.5 py-1 font-mono text-[11px] text-slate-300">DEMO MODE</span>
+          </div>
+          <div class="mb-4">
+            <label class="mb-2 block text-xs font-semibold text-slate-400">1. Select pet species</label>
+            <div class="grid grid-cols-2 gap-2.5">
+              <button type="button" id="simSpeciesDog" onclick="setSimSpecies('Dog')" class="sb on flex items-center justify-center gap-2 !text-sm">🐕 Dog</button>
+              <button type="button" id="simSpeciesCat" onclick="setSimSpecies('Cat')" class="sb flex items-center justify-center gap-2 !text-sm">🐈 Cat</button>
+            </div>
+          </div>
+          <div class="mb-5">
+            <label class="mb-2 block text-xs font-semibold text-slate-400">2. Tap a common 2 AM symptom</label>
+            <div class="grid gap-2 sm:grid-cols-2" id="simSymptomButtons">
+              <button type="button" onclick="selectSimSymptom('vomiting')" data-symptom="vomiting" class="sim-symptom-btn sb on">Repeated Vomiting (3+ times)</button>
+              <button type="button" onclick="selectSimSymptom('lethargy')" data-symptom="lethargy" class="sim-symptom-btn sb">Sudden Lethargy / Hiding</button>
+              <button type="button" onclick="selectSimSymptom('toxin')" data-symptom="toxin" class="sim-symptom-btn sb">Ate Unknown Food / Plant</button>
+              <button type="button" onclick="selectSimSymptom('limping')" data-symptom="limping" class="sim-symptom-btn sb">Mild Limping / Minor Scrape</button>
+            </div>
+          </div>
+          <div class="space-y-3 rounded-2xl border border-white/10 bg-obsidian/70 p-4">
+            <div class="flex items-center justify-between gap-2">
+              <span class="text-xs font-semibold text-slate-400">Simulated urgency score</span>
+              <span id="simUrgencyBadge" class="ring rounded-full border border-amber-400/50 bg-amber-500/20 px-3 py-1 text-xs font-extrabold text-amber-300">Urgent Review Recommended</span>
+            </div>
+            <p id="simGuidanceText" class="text-xs leading-relaxed text-slate-300 sm:text-sm">Dog • Repeated Vomiting: High dehydration risk if unable to hold water. Check gum moisture and abdominal tension. Generates Priority Case Packet for optional $49/$79 clinic review or local urgent care.</p>
+            <div class="flex items-center justify-between border-t border-white/10 pt-2 text-[11px] text-slate-400">
+              <span id="simPacketStatus" class="font-mono text-cyan-400">Packet #PSD-8492 Ready</span>
+              <button type="button" onclick="openTriageModalWithSim()" class="font-bold text-white transition hover:text-cyan-400 cursor-pointer">Build Real Case Packet →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="overflow-hidden border-y border-white/10 bg-white/[0.02] py-4" aria-hidden="true">
+  <div class="mq gap-12 whitespace-nowrap font-display text-sm font-bold text-slate-400">
+    <span class="flex gap-12"><span>24/7 Guided Triage</span><span class="text-cyan-400">◆</span><span>60-Second Urgency Score</span><span class="text-amber-400">◆</span><span>Clinic-Ready Case Packets</span><span class="text-cyan-400">◆</span><span>Works With Any ER Vet</span><span class="text-amber-400">◆</span><span>Encrypted Handoff</span><span class="text-cyan-400">◆</span><span>No Hardware</span><span class="text-amber-400">◆</span></span>
+    <span class="flex gap-12"><span>24/7 Guided Triage</span><span class="text-cyan-400">◆</span><span>60-Second Urgency Score</span><span class="text-amber-400">◆</span><span>Clinic-Ready Case Packets</span><span class="text-cyan-400">◆</span><span>Works With Any ER Vet</span><span class="text-amber-400">◆</span><span>Encrypted Handoff</span><span class="text-cyan-400">◆</span><span>No Hardware</span><span class="text-amber-400">◆</span></span>
+  </div>
+</div>
+
+<!-- STATS -->
+<section class="rv mx-auto grid max-w-6xl grid-cols-2 gap-px overflow-hidden px-4 py-14 text-center sm:px-6 md:grid-cols-4">
+  <div><div class="font-display text-4xl font-extrabold text-white sm:text-5xl">60<span class="text-cyan-400">s</span></div><div class="mt-1 text-xs text-slate-400">to an urgency score</div></div>
+  <div><div class="font-display text-4xl font-extrabold text-white sm:text-5xl">24/7</div><div class="mt-1 text-xs text-slate-400">guided triage</div></div>
+  <div><div class="font-display text-4xl font-extrabold text-white sm:text-5xl">$1.99</div><div class="mt-1 text-xs text-slate-400">per month</div></div>
+  <div><div class="font-display text-4xl font-extrabold text-white sm:text-5xl">$0</div><div class="mt-1 text-xs text-slate-400">hardware required</div></div>
+</section>
+
+<!-- PROBLEM -->
+<section class="border-y border-white/10 bg-navy/50 py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="rv mx-auto mb-14 max-w-3xl text-center">
+      <span class="eb">The 2:00 AM crisis problem</span>
+      <h2 class="h2 mt-3">When Your Pet Is Sick After Hours, Guessing Costs Time, Sleep, and Thousands of Dollars</h2>
+      <p class="mt-4 text-sm leading-relaxed text-slate-300 sm:text-base">In the U.S., pet parents spend over $150B+ annually on care—yet when strange symptoms strike at night, you are stuck between terrifying online forums and a $1,200+ emergency room deposit.</p>
+    </div>
+    <div class="grid gap-6 md:grid-cols-2">
+      <div class="rv card spot !border-rose-500/30">
+        <div class="mb-4 inline-flex rounded-full bg-rose-500/15 px-3 py-1 text-xs font-bold text-rose-300">Without Structured Triage</div>
+        <h3 class="mb-4 font-display text-xl font-bold text-white">Search-Engine Spiral & ER Roulette</h3>
+        <ul class="space-y-3.5 text-sm text-slate-300">
+          <li class="li"><b class="text-rose-400">✕</b><span>Contradictory search results that spike panic without telling you which red flags actually matter right now.</span></li>
+          <li class="li"><b class="text-rose-400">✕</b><span>4-hour emergency room waits—and $800 to $1,500+ bills—for non-urgent issues that could have waited until morning.</span></li>
+          <li class="li"><b class="text-rose-400">✕</b><span>Forgetting critical weight, medication, or symptom onset details while stressed at the clinic intake desk.</span></li>
+        </ul>
+      </div>
+      <div class="rv card spot !border-cyan-500/40 shadow-xl shadow-cyan-500/10">
+        <div class="mb-4 inline-flex rounded-full bg-cyan-500/15 px-3 py-1 text-xs font-bold text-cyan-300">With PetShield Dispatch™</div>
+        <h3 class="mb-4 font-display text-xl font-bold text-white">Calm, Structured Clarity in 60 Seconds</h3>
+        <ul class="space-y-3.5 text-sm text-slate-200">
+          <li class="li"><b class="text-cyan-400">✓</b><span>Guided red-flag symptom intake designed to cut through panic and score urgency clearly.</span></li>
+          <li class="li"><b class="text-cyan-400">✓</b><span>Instant <strong class="text-white">Emergency Case Packet</strong> with saved weight, history, and symptom timeline ready for any vet.</span></li>
+          <li class="li"><b class="text-cyan-400">✓</b><span>Optional asynchronous veterinary consult routing (<strong class="text-amber-300">$49 standard / $79 urgent</strong>) when you want partner clinic review before driving in.</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS (BENTO) -->
+<section id="how-it-works" class="py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="rv mx-auto mb-14 max-w-3xl text-center">
+      <span class="eb">3-step rapid response workflow</span>
+      <h2 class="h2 mt-3">From First Symptom to Clinic-Ready Handoff in Under a Minute</h2>
+    </div>
+    <div class="mb-6 grid gap-6 md:grid-cols-3">
+      <div class="rv card spot"><div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-cyan-400/40 bg-cyan-500/15 font-display font-extrabold text-cyan-300">1</div><h3 class="mb-2 font-display text-lg font-bold text-white">Guided Symptom & Urgency Intake</h3><p class="text-sm leading-relaxed text-slate-300">Answer plain-language questions about your dog or cat’s behavior, gum color, appetite, and symptom onset—zero medical jargon or hardware required.</p></div>
+      <div class="rv card spot"><div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-amber-400/40 bg-amber-500/15 font-display font-extrabold text-amber-300">2</div><h3 class="mb-2 font-display text-lg font-bold text-white">Urgency Flag & Emergency Case Packet</h3><p class="text-sm leading-relaxed text-slate-300">Our triage engine assigns a clear urgency tier and compiles a structured <strong class="text-white">Emergency Case Packet</strong> with your pet’s baseline vitals and timeline.</p></div>
+      <div class="rv card spot"><div class="mb-4 flex h-10 w-10 items-center justify-center rounded-xl border border-emerald-400/40 bg-emerald-500/15 font-display font-extrabold text-emerald-300">3</div><h3 class="mb-2 font-display text-lg font-bold text-white">Actionable Next Steps or Clinic Routing</h3><p class="text-sm leading-relaxed text-slate-300">Monitor safely at home, submit an optional automated consult ($49/$79) to a partner clinic, or hand your packet directly to any 24/7 ER vet desk.</p></div>
+    </div>
+
+    <div id="case-packet" class="rv spot card !p-6 sm:!p-10 !border-cyan-500/40 shadow-2xl shadow-cyan-500/10">
+      <div class="grid items-center gap-8 lg:grid-cols-12">
+        <div class="space-y-4 lg:col-span-5">
+          <div class="inline-flex rounded-full border border-amber-400/40 bg-amber-400/15 px-3 py-1 text-xs font-bold text-amber-300">Tangible output • Included in $1.99/mo pass</div>
+          <h3 class="font-display text-2xl font-extrabold text-white sm:text-4xl">Meet Your Clinic-Ready Emergency Case Packet</h3>
+          <p class="text-sm leading-relaxed text-slate-300 sm:text-base">Veterinary teams triage faster when intake data is clean and structured. Instead of repeating your story while your pet is anxious, share or display your standardized Case Packet immediately.</p>
+          <div class="rounded-2xl border border-white/10 bg-obsidian/70 p-4 text-xs leading-relaxed text-slate-300"><strong class="mb-1 block text-cyan-400">Universal Clinic Portability:</strong>Works seamlessly with PetShield Partner Clinics for automated consult routing ($49/$79)—or hand it directly to <strong>any 24/7 emergency vet hospital</strong> to skip clipboards and speed up intake.</div>
+          <div class="flex flex-wrap gap-3">
+            <button onclick="copySamplePacket()" id="copyPacketBtn" class="btn-g px-4 py-2.5 text-xs !text-cyan-300">Copy Sample Clinic Brief</button>
+            <button onclick="openTriageModal()" class="btn-a px-4 py-2.5 text-xs">Create Your Pet’s Packet →</button>
+          </div>
+        </div>
+        <div class="lg:col-span-7">
+          <div id="samplePacketArtifact" class="rounded-2xl border border-white/10 bg-obsidian p-5 font-mono text-xs shadow-inner sm:p-6">
+            <div class="mb-4 flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-3">
+              <div class="flex items-center gap-2"><span class="h-2.5 w-2.5 animate-pulse rounded-full bg-emerald-400"></span><span class="font-bold tracking-wide text-white">EMERGENCY CASE PACKET • #PSD-2026-884</span></div>
+              <span class="text-slate-400">ENCRYPTED HANDOFF READY</span>
+            </div>
+            <div class="mb-4 grid gap-3 sm:grid-cols-2">
+              <div class="rounded-xl border border-white/10 bg-slatecard/80 p-3"><div class="text-[10px] uppercase text-slate-400">Pet Profile & Weight</div><div class="mt-0.5 font-semibold text-white">Bella • Canine (Golden Retriever) • 64 lbs • 4 yrs</div></div>
+              <div class="rounded-xl border border-amber-400/40 bg-amber-500/10 p-3"><div class="text-[10px] uppercase text-amber-300">Red-Flag Urgency Score</div><div class="mt-0.5 font-bold text-amber-300">LEVEL 2 — URGENT CLINIC REVIEW RECOMMENDED</div></div>
+            </div>
+            <div class="mb-4 space-y-2 rounded-xl border border-white/10 bg-slatecard/80 p-3.5">
+              <div class="text-[10px] font-bold uppercase text-cyan-400">Structured Symptom Timeline</div>
+              <p class="leading-relaxed text-slate-200">• Onset: ~90 mins ago (01:15 AM). 3 episodes of bilious vomiting; refusing water.<br/>• Vitals Check: Pink/moist gums; no unproductive retching or abdominal distension.<br/>• Exposure Notes: No known toxin access; ate table scraps earlier in evening.</p>
+            </div>
+            <div class="flex flex-wrap items-center justify-between gap-2 border-t border-white/10 pt-2 text-[11px] text-slate-400"><span>Routing: Partner Clinic Consult ($49/$79) OR Direct ER Desk</span><span class="font-semibold text-cyan-400">Verified Structured Intake</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST -->
+<section class="border-y border-white/10 bg-navy/40 py-16 sm:py-20">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-8 grid gap-6 md:grid-cols-3">
+      <div class="rv card spot !p-6"><div class="mb-2 font-display text-base font-bold text-amber-400">Human-Animal Bond Science</div><p class="text-sm leading-relaxed text-slate-300">Pets are family. During an acute health scare, owner cortisol spikes and decision-making degrades. Structured intake replaces guesswork with calm, step-by-step clarity.</p></div>
+      <div class="rv card spot !p-6"><div class="mb-2 font-display text-base font-bold text-cyan-400">Privacy & Encrypted Sharing</div><p class="text-sm leading-relaxed text-slate-300">Your pet’s profile and symptom history are transmitted securely only when you authorize an Emergency Case Packet handoff or partner clinic consult.</p></div>
+      <div class="rv card spot !p-6"><div class="mb-2 font-display text-base font-bold text-emerald-400">Built For Veterinary Workflows</div><p class="text-sm leading-relaxed text-slate-300">Designed around the exact intake questions emergency triage nurses and DVMs ask first—saving critical minutes upon arrival.</p></div>
+    </div>
+    <div class="rv flex flex-col items-start gap-4 rounded-2xl border border-amber-400/40 bg-amber-500/10 p-5 sm:flex-row sm:items-center sm:p-6">
+      <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-amber-400/20 text-amber-300"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z"/></svg></span>
+      <div class="text-xs leading-relaxed text-slate-200 sm:text-sm"><strong class="text-amber-300">Transparent Veterinary Scope Guarantee:</strong> PetShield Dispatch™ provides structured symptom triage, urgency scoring, and emergency data sharing to accelerate care coordination. It does not issue veterinary medical diagnoses and never replaces licensed DVM examination.</div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing" class="py-20 sm:py-28">
+  <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+    <div class="rv mx-auto mb-14 max-w-3xl text-center">
+      <span class="eb">Simple, honest protection</span>
+      <h2 class="h2 mt-3">24/7 Peace of Mind for Less Than a Cup of Coffee</h2>
+      <p class="mt-3 text-sm text-slate-300 sm:text-base">No surprise subscription traps. Keep your Digital Triage Pass active for $1.99/month, and only pay for optional automated veterinary consults if you ever choose to escalate a case.</p>
+    </div>
+    <div class="grid items-stretch gap-6 lg:grid-cols-3 sm:gap-8">
+      <div class="rv card spot flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-bold text-slate-400">Preventative prep</div><h3 class="mt-1 font-display text-xl font-bold text-white">Free Readiness Kit</h3>
+          <div class="mt-4 flex items-baseline gap-1"><span class="font-display text-5xl font-extrabold text-white">$0</span><span class="text-sm text-slate-400">/ forever</span></div>
+          <p class="mt-3 text-sm text-slate-300">Essential home reference so you know what to check before an emergency happens.</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-300"><li class="li"><b class="text-cyan-400">✓</b>2 AM Pet Emergency Readiness Checklist</li><li class="li"><b class="text-cyan-400">✓</b>Dog & Cat Red-Flag Symptom Guide</li><li class="li"><b class="text-cyan-400">✓</b>Normal Baseline Vitals Reference Card</li></ul>
+        </div>
+        <button onclick="openChecklistModal()" class="btn-g mt-8 w-full px-5 py-3.5 text-sm">Get Free Checklist</button>
+      </div>
+      <div class="rv card spot relative flex flex-col justify-between !border-2 !border-cyan-400 shadow-2xl shadow-cyan-500/20 !overflow-visible">
+        <div class="absolute -top-3.5 right-6 rounded-full bg-gradient-to-r from-cyan-500 to-amber-400 px-3.5 py-1 text-[11px] font-extrabold text-obsidian">Most popular • 24/7 active</div>
+        <div>
+          <div class="text-xs font-bold text-cyan-400">Always-on protection</div><h3 class="mt-1 font-display text-2xl font-bold text-white">Digital Triage Pass</h3>
+          <div class="mt-4 flex items-baseline gap-1"><span class="font-display text-6xl font-extrabold text-white">$1.99</span><span class="text-sm text-slate-300">/ month</span></div>
+          <p class="mt-3 text-sm text-slate-300">Unlimited 24/7 guided symptom triage and instant Emergency Case Packet generation.</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-200"><li class="li"><b class="text-cyan-400">✓</b>Unlimited 60-Second Guided Triage Checks</li><li class="li"><b class="text-cyan-400">✓</b>Instant Clinic-Ready Emergency Case Packets</li><li class="li"><b class="text-cyan-400">✓</b>Pre-Saved Pet Profile, Weight & Allergy Data</li><li class="li"><b class="text-cyan-400">✓</b>Portable Handoff for Any 24/7 ER Vet</li><li class="li"><b class="text-cyan-400">✓</b>Cancel Anytime in One Click</li></ul>
+        </div>
+        <button onclick="openTriageModal()" class="btn-p mt-8 w-full px-5 py-4 text-base">Activate $1.99/mo Pass</button>
+      </div>
+      <div class="rv card spot flex flex-col justify-between">
+        <div>
+          <div class="text-xs font-bold text-amber-400">On-demand escalation</div><h3 class="mt-1 font-display text-xl font-bold text-white">Automated Vet Consult</h3>
+          <div class="mt-4 flex items-baseline gap-1.5"><span class="font-display text-5xl font-extrabold text-white">$49</span><span class="text-sm text-slate-400">std /</span><span class="font-display text-3xl font-extrabold text-amber-300">$79</span><span class="text-sm text-slate-400">urgent</span></div>
+          <p class="mt-3 text-sm text-slate-300">Pay only when you request direct partner clinic review of your Emergency Case Packet.</p>
+          <ul class="mt-6 space-y-3 text-sm text-slate-300"><li class="li"><b class="text-amber-400">✓</b>Asynchronous AI-Assisted Intake Routing</li><li class="li"><b class="text-amber-400">✓</b>Direct Review by Participating Partner Clinic</li><li class="li"><b class="text-amber-400">✓</b>Photo, Symptom History & Urgency Score Included</li><li class="li"><b class="text-amber-400">✓</b>Zero Charge Unless You Submit a Consult</li></ul>
+        </div>
+        <button onclick="openTriageModal()" class="btn-g mt-8 w-full border-amber-400/50 px-5 py-3.5 text-sm !text-amber-300">Start With $1.99/mo Pass First</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="bg-navy/40 py-20 sm:py-28">
+  <div class="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <div class="rv mb-12 text-center"><span class="eb">Clear answers when seconds count</span><h2 class="h2 mt-3">Frequently Asked Questions</h2></div>
+    <div class="space-y-3.5" id="faqAccordion">
+      <div class="rv overflow-hidden rounded-2xl border border-white/10 bg-slatecard/70"><button type="button" aria-expanded="false" onclick="toggleFaq(this)" class="flex w-full items-center justify-between gap-4 px-6 py-4 text-left font-display text-sm font-bold text-white transition hover:text-cyan-300 sm:text-base cursor-pointer"><span>How do I know if my dog or cat needs an emergency vet right now?</span><span class="faq-icon text-xl font-normal text-cyan-400">+</span></button><div class="faq-body hidden border-t border-white/10 px-6 pb-5 pt-3 text-sm leading-relaxed text-slate-300">Immediate emergency indicators include labored or rapid breathing, pale/white/blue gums, repeated unproductive retching, collapse, seizures, uncontrolled bleeding, straining to urinate (especially in male cats), or known toxin ingestion. PetShield Dispatch walks you through these red-flag checks in 60 seconds and generates an urgency score plus a clinic-ready Emergency Case Packet.</div></div>
+      <div class="rv overflow-hidden rounded-2xl border border-white/10 bg-slatecard/70"><button type="button" aria-expanded="false" onclick="toggleFaq(this)" class="flex w-full items-center justify-between gap-4 px-6 py-4 text-left font-display text-sm font-bold text-white transition hover:text-cyan-300 sm:text-base cursor-pointer"><span>Why is the Digital Triage Pass only $1.99/month?</span><span class="faq-icon text-xl font-normal text-cyan-400">+</span></button><div class="faq-body hidden border-t border-white/10 px-6 pb-5 pt-3 text-sm leading-relaxed text-slate-300">Because PetShield Dispatch is 100% software-first—requiring zero proprietary collars or expensive hardware—we keep 24/7 readiness affordable for every pet owner at $1.99/month. You get unlimited guided triage checks and instant Emergency Case Packets around the clock, and you only pay for optional on-demand automated veterinary consults ($49 standard / $79 urgent) if you choose to escalate a case.</div></div>
+      <div class="rv overflow-hidden rounded-2xl border border-white/10 bg-slatecard/70"><button type="button" aria-expanded="false" onclick="toggleFaq(this)" class="flex w-full items-center justify-between gap-4 px-6 py-4 text-left font-display text-sm font-bold text-white transition hover:text-cyan-300 sm:text-base cursor-pointer"><span>What is an Emergency Case Packet and can any vet use it?</span><span class="faq-icon text-xl font-normal text-cyan-400">+</span></button><div class="faq-body hidden border-t border-white/10 px-6 pb-5 pt-3 text-sm leading-relaxed text-slate-300">An Emergency Case Packet is a clean, standardized clinical summary containing your pet’s species, weight, baseline history, symptom onset timeline, and red-flag urgency level. It routes directly to participating PetShield partner clinics for automated consults, or you can copy/display it at any 24/7 emergency veterinary hospital to speed up front-desk intake.</div></div>
+      <div class="rv overflow-hidden rounded-2xl border border-white/10 bg-slatecard/70"><button type="button" aria-expanded="false" onclick="toggleFaq(this)" class="flex w-full items-center justify-between gap-4 px-6 py-4 text-left font-display text-sm font-bold text-white transition hover:text-cyan-300 sm:text-base cursor-pointer"><span>Does PetShield Dispatch replace my veterinarian?</span><span class="faq-icon text-xl font-normal text-cyan-400">+</span></button><div class="faq-body hidden border-t border-white/10 px-6 pb-5 pt-3 text-sm leading-relaxed text-slate-300">No. PetShield Dispatch is a structured symptom intake, urgency-scoring, and emergency data-sharing system built to help pet parents make calmer, faster decisions and give veterinary teams cleaner intake data. It does not issue medical diagnoses and never replaces licensed veterinary examination.</div></div>
+      <div class="rv overflow-hidden rounded-2xl border border-white/10 bg-slatecard/70"><button type="button" aria-expanded="false" onclick="toggleFaq(this)" class="flex w-full items-center justify-between gap-4 px-6 py-4 text-left font-display text-sm font-bold text-white transition hover:text-cyan-300 sm:text-base cursor-pointer"><span>How do the optional $49 and $79 automated consults work?</span><span class="faq-icon text-xl font-normal text-cyan-400">+</span></button><div class="faq-body hidden border-t border-white/10 px-6 pb-5 pt-3 text-sm leading-relaxed text-slate-300">If your triage result suggests urgent or same-day clinical guidance and a participating partner veterinary practice is available in your area, you can optionally transmit your Emergency Case Packet for asynchronous clinical intake review ($49 standard / $79 urgent). You are never charged unless you explicitly request a consult.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="px-4 py-20 sm:px-6">
+  <div class="rv relative mx-auto max-w-6xl overflow-hidden rounded-[2rem] border border-white/10 p-10 text-center sm:p-16" style="background:radial-gradient(ellipse at 20% 0%,rgba(6,182,212,.55),transparent 55%),radial-gradient(ellipse at 90% 100%,rgba(245,158,11,.4),transparent 55%),#0b1220">
+    <h2 class="mx-auto max-w-3xl font-display text-3xl font-extrabold leading-tight text-white sm:text-5xl">Be ready before the 2:00 AM scare happens.</h2>
+    <p class="mx-auto mt-4 max-w-xl text-slate-200">Save your pet’s profile now. Cancel anytime.</p>
+    <div class="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+      <button onclick="openTriageModal()" class="btn-p px-7 py-4 text-base">Activate $1.99/mo Pass</button>
+      <button onclick="openChecklistModal()" class="btn-g px-7 py-4 text-base">Get Free Checklist</button>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- B2B VIEW -->
+<section id="b2bView" class="hidden border-b border-white/10 py-14 sm:py-20">
+  <div class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div class="mb-10 flex flex-wrap items-center justify-between gap-4 border-b border-white/10 pb-8">
+      <div>
+        <span class="rounded-full border border-amber-400/40 bg-amber-400/15 px-3 py-1 text-xs font-bold text-amber-300">Veterinary Partner Program</span>
+        <h1 class="mt-3 font-display text-3xl font-extrabold text-white sm:text-5xl">Turn Unstructured After-Hours Calls Into Qualified, Pre-Triaged Cases</h1>
+        <p class="mt-2 max-w-2xl text-sm text-slate-300 sm:text-base">Partner with PetShield Dispatch™ to receive structured Emergency Case Packets, capture new asynchronous consult revenue, and reduce front-desk triage bottlenecks.</p>
+      </div>
+      <button onclick="switchView('b2c')" class="btn-g px-4 py-2.5 text-xs !text-cyan-300 sm:text-sm">← Back to Pet Owner View</button>
+    </div>
+    <div class="mb-12 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <div class="card spot !p-6"><div class="mb-2 font-display text-base font-bold text-amber-400">1. Expand Care Access</div><p class="text-sm leading-relaxed text-slate-300">Receive qualified, pre-screened pet cases routed through our guided symptom triage and urgency scoring workflow.</p></div>
+      <div class="card spot !p-6"><div class="mb-2 font-display text-base font-bold text-cyan-400">2. New Revenue Stream</div><p class="text-sm leading-relaxed text-slate-300">Earn <strong class="text-white">50% net revenue share</strong> on routed automated consults ($49 → $24.50; $79 → $39.50) plus <strong class="text-white">20% referral commission</strong> on activated Digital Triage Passes.</p></div>
+      <div class="card spot !p-6"><div class="mb-2 font-display text-base font-bold text-emerald-400">3. Faster Coordination</div><p class="text-sm leading-relaxed text-slate-300">Encrypted Emergency Case Packets arrive with species, weight, symptom timeline, images, and urgency flags already organized.</p></div>
+      <div class="card spot !p-6"><div class="mb-2 font-display text-base font-bold text-purple-300">4. Zero Platform Cost</div><p class="text-sm leading-relaxed text-slate-300">No upfront software licensing fee. Non-exclusive partnership with monthly payouts (Net-30) and transparent activity reporting.</p></div>
+    </div>
+    <div class="card mx-auto max-w-2xl !border-amber-400/40 !p-6 shadow-2xl sm:!p-8">
+      <h2 class="mb-2 font-display text-xl font-bold text-white sm:text-2xl">Request a Veterinary Partner Agreement</h2>
+      <p class="mb-6 text-sm text-slate-300">Share your practice details below to receive our Partnership Service Contract overview and clinic onboarding link.</p>
+      <form id="partnerLeadForm" onsubmit="handlePartnerSubmit(event)" class="space-y-4">
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div><label class="lbl" for="partnerClinicName">Veterinary Practice Name *</label><input type="text" id="partnerClinicName" required placeholder="e.g., Highlands Animal Hospital" class="inp"/></div>
+          <div><label class="lbl" for="partnerContactName">Contact Name & Role *</label><input type="text" id="partnerContactName" required placeholder="Dr. Jane Smith, DVM / Practice Mgr" class="inp"/></div>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2">
+          <div><label class="lbl" for="partnerEmail">Clinic Email *</label><input type="email" id="partnerEmail" required placeholder="office@yourvetclinic.com" class="inp"/></div>
+          <div><label class="lbl" for="partnerLocation">City / State *</label><input type="text" id="partnerLocation" required placeholder="e.g., Avon Park, FL" class="inp"/></div>
+        </div>
+        <button type="submit" class="btn-a w-full px-6 py-3.5 text-sm sm:text-base">Request Partner Onboarding Packet</button>
+      </form>
+      <div id="partnerSuccessBox" class="hidden mt-4 rounded-2xl border border-emerald-400/40 bg-emerald-500/15 p-4 text-sm text-emerald-200"><strong>Partner Request Logged!</strong> Thank you—our clinic onboarding team will send the PetShield Dispatch™ Partnership Service Contract and portal walkthrough to your email shortly.</div>
+    </div>
+  </div>
+</section>
+
+<footer class="border-t border-white/10 bg-obsidian py-12 text-xs text-slate-400 sm:py-16">
+  <div class="mx-auto max-w-7xl space-y-8 px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
+      <div><div class="font-display text-lg font-extrabold text-white">PetShield <span class="text-cyan-400">Dispatch™</span></div><p class="mt-1 max-w-md">Fast Triage • Smart Data • Real Protection. Software-first 24/7 pet emergency triage and clinic-ready Emergency Case Packet routing.</p></div>
+      <div class="flex flex-wrap items-center gap-5 text-xs font-semibold text-slate-300">
+        <a href="#how-it-works" onclick="switchView('b2c')" class="transition hover:text-cyan-400">How It Works</a>
+        <a href="#case-packet" onclick="switchView('b2c')" class="transition hover:text-cyan-400">Emergency Case Packet</a>
+        <a href="#pricing" onclick="switchView('b2c')" class="transition hover:text-cyan-400">Pricing ($1.99/mo)</a>
+        <button onclick="switchView('b2b')" class="text-amber-400 transition hover:text-amber-300 cursor-pointer">Veterinary Partner Program →</button>
+      </div>
+    </div>
+    <div class="rounded-2xl border border-white/10 bg-navy/80 p-4 leading-relaxed"><strong class="text-slate-200">Medical & Veterinary Disclaimer:</strong> PetShield Dispatch™, LLC provides structured symptom intake, urgency scoring, and encrypted emergency data sharing for informational and care-coordination purposes only. PetShield Dispatch is not a veterinary clinic and does not provide veterinary medical diagnoses, prescriptions, or emergency medical treatment. Always consult a licensed veterinarian for medical advice, and seek immediate in-person emergency care for life-threatening pet symptoms.</div>
+    <div class="flex flex-col items-center justify-between gap-3 border-t border-white/10 pt-4 text-[11px] text-slate-500 sm:flex-row"><span>© 2026 PetShield Dispatch™, LLC. All rights reserved.</span><span>Zero-Hardware Software Architecture • Encrypted Case Handoff</span></div>
+  </div>
+</footer>
+
+<!-- MODAL 1 -->
+<div id="triageModal" class="mdl" role="dialog" aria-modal="true" aria-label="Digital Triage Pass">
+  <div class="relative my-8 w-full max-w-lg rounded-3xl border border-cyan-500/40 bg-slatecard p-6 shadow-2xl shadow-cyan-500/10 sm:p-8">
+    <button onclick="closeTriageModal()" aria-label="Close modal" class="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-slateborder bg-navy text-slate-300 hover:text-white cursor-pointer">✕</button>
+    <div id="triageFormStep">
+      <span class="text-xs font-bold text-cyan-400">Digital Triage Pass • $1.99/mo</span>
+      <h3 class="mt-1 pr-8 font-display text-xl font-extrabold text-white sm:text-2xl">Generate Your Pet’s Instant Emergency Case Packet</h3>
+      <p class="mb-5 mt-1.5 text-xs text-slate-300 sm:text-sm">Enter your pet’s baseline details below to run guided triage and unlock 24/7 Emergency Case Packet generation.</p>
+      <form onsubmit="handleTriageSubmit(event)" class="space-y-4">
+        <div class="grid gap-3.5 sm:grid-cols-2">
+          <div><label class="lbl" for="triagePetName">Pet’s Name *</label><input type="text" id="triagePetName" required placeholder="e.g., Max" class="inp"/></div>
+          <div><label class="lbl" for="triagePetMeta">Species & Approx. Weight *</label><input type="text" id="triagePetMeta" required placeholder="e.g., Dog • 45 lbs" class="inp"/></div>
+        </div>
+        <div><label class="lbl" for="triageConcern">Current Symptom or Concern *</label>
+          <select id="triageConcern" class="inp">
+            <option value="Pre-Crisis Setup (Save Profile Now)">No Active Emergency — Save Profile for 24/7 Protection</option>
+            <option value="Repeated Vomiting / Diarrhea">Repeated Vomiting or Diarrhea</option>
+            <option value="Sudden Lethargy / Hiding / Refusing Food">Sudden Lethargy, Hiding, or Refusing Food</option>
+            <option value="Possible Toxin / Unknown Food Ingestion">Ate Unknown Food, Plant, or Medication</option>
+            <option value="Limping / Minor Wound / Eye Squinting">Limping, Minor Wound, or Eye Irritation</option>
+          </select></div>
+        <div><label class="lbl" for="triageOwnerEmail">Your Email (For Packet Delivery & Pass Access) *</label><input type="email" id="triageOwnerEmail" required placeholder="you@example.com" class="inp"/></div>
+        <div class="flex items-center justify-between rounded-xl border border-slateborder bg-navy/90 p-3 text-[11px] text-slate-300"><span>Digital Triage Pass Subscription:</span><strong class="text-xs text-cyan-400">$1.99/mo • Cancel Anytime</strong></div>
+        <button type="submit" class="btn-p w-full px-5 py-3.5 text-sm sm:text-base">Generate Case Packet & Activate $1.99/mo Pass</button>
+      </form>
+    </div>
+    <div id="triageResultStep" class="hidden space-y-4">
+      <div class="inline-flex rounded-full border border-emerald-400/40 bg-emerald-500/15 px-3 py-1 text-xs font-bold text-emerald-300">✓ Emergency Case Packet Generated</div>
+      <h3 class="font-display text-xl font-extrabold text-white">Your Clinic-Ready Brief Is Ready</h3>
+      <div id="generatedPacketOutput" class="whitespace-pre-line rounded-2xl border border-white/10 bg-obsidian p-4 font-mono text-xs leading-relaxed text-slate-200"></div>
+      <div class="flex flex-col gap-3 sm:flex-row">
+        <button onclick="copyGeneratedPacket()" id="copyGenBtn" class="btn-p flex-1 px-4 py-3 text-xs sm:text-sm">Copy Packet for Vet Desk</button>
+        <button onclick="closeTriageModal()" class="btn-g px-4 py-3 text-xs sm:text-sm">Done</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL 2 -->
+<div id="checklistModal" class="mdl" role="dialog" aria-modal="true" aria-label="Free readiness checklist">
+  <div class="relative my-8 w-full max-w-lg rounded-3xl border border-amber-400/40 bg-slatecard p-6 shadow-2xl sm:p-8">
+    <button onclick="closeChecklistModal()" aria-label="Close modal" class="absolute right-5 top-5 flex h-9 w-9 items-center justify-center rounded-full border border-slateborder bg-navy text-slate-300 hover:text-white cursor-pointer">✕</button>
+    <div id="checklistFormStep">
+      <span class="text-xs font-bold text-amber-400">Free home safety guide</span>
+      <h3 class="mt-1 pr-8 font-display text-xl font-extrabold text-white sm:text-2xl">The 2 AM Pet Emergency Readiness & Red-Flag Checklist</h3>
+      <p class="mb-5 mt-1.5 text-xs text-slate-300 sm:text-sm">Unlock our quick-scan checklist for gum color, breathing rate, toxin red flags, and ER prep—free for dog and cat parents.</p>
+      <form onsubmit="handleChecklistSubmit(event)" class="space-y-4">
+        <div><span class="lbl">Which pets are in your home? *</span>
+          <div class="grid grid-cols-3 gap-2">
+            <label class="cursor-pointer"><input type="radio" name="checklistSpecies" value="Dog" checked class="peer sr-only"/><div class="rounded-xl border border-slateborder bg-navy py-2.5 text-center text-xs font-bold text-white peer-checked:border-amber-400 peer-checked:bg-amber-400/15 peer-focus-visible:ring-2 peer-focus-visible:ring-cyan-400">🐕 Dog</div></label>
+            <label class="cursor-pointer"><input type="radio" name="checklistSpecies" value="Cat" class="peer sr-only"/><div class="rounded-xl border border-slateborder bg-navy py-2.5 text-center text-xs font-bold text-white peer-checked:border-amber-400 peer-checked:bg-amber-400/15 peer-focus-visible:ring-2 peer-focus-visible:ring-cyan-400">🐈 Cat</div></label>
+            <label class="cursor-pointer"><input type="radio" name="checklistSpecies" value="Both" class="peer sr-only"/><div class="rounded-xl border border-slateborder bg-navy py-2.5 text-center text-xs font-bold text-white peer-checked:border-amber-400 peer-checked:bg-amber-400/15 peer-focus-visible:ring-2 peer-focus-visible:ring-cyan-400">🐾 Both</div></label>
+          </div></div>
+        <div><label class="lbl" for="checklistEmail">Where should we send your printable copy? *</label><input type="email" id="checklistEmail" required placeholder="you@example.com" class="inp"/></div>
+        <button type="submit" class="btn-a w-full px-5 py-3.5 text-sm sm:text-base">Unlock Free 2 AM Readiness Checklist →</button>
+      </form>
+    </div>
+    <div id="checklistResultStep" class="hidden space-y-4">
+      <div class="inline-flex rounded-full border border-emerald-400/40 bg-emerald-500/15 px-3 py-1 text-xs font-bold text-emerald-300">✓ Checklist Unlocked</div>
+      <h3 class="font-display text-lg font-extrabold text-white">2 AM Red-Flag Quick Check</h3>
+      <ul class="space-y-2 rounded-2xl border border-white/10 bg-obsidian p-4 text-xs text-slate-200">
+        <li><strong class="text-rose-400">1. Gum Color:</strong> Healthy gums are bubblegum pink. Pale, white, blue, or brick-red gums = immediate ER visit.</li>
+        <li><strong class="text-rose-400">2. Resting Breathing:</strong> Over 35–40 breaths/min at rest or flared nostrils/belly effort = immediate ER visit.</li>
+        <li><strong class="text-amber-300">3. Unproductive Retching:</strong> Trying to vomit with nothing coming up (especially deep-chested dogs) = immediate ER visit.</li>
+        <li><strong class="text-cyan-400">4. Urinary Straining:</strong> Repeated litter-box trips with no urine (especially male cats) = immediate ER visit.</li>
+      </ul>
+      <div class="space-y-2.5 rounded-2xl border border-cyan-400/40 bg-cyan-500/10 p-4">
+        <div class="text-xs font-bold text-cyan-300">Want 24/7 Guided Triage + Saved Case Packets?</div>
+        <p class="text-xs text-slate-300">Upgrade now for just <strong>$1.99/month</strong> so your pet’s profile and Emergency Case Packet are always one tap away.</p>
+        <button onclick="switchChecklistToTriage()" class="btn-p w-full px-4 py-2.5 text-xs">Activate $1.99/mo Digital Triage Pass →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+const WEBHOOK_URL = "";
+let currentSimSpecies = "Dog", currentSimSymptom = "vomiting";
+const simScenarios = {
+  vomiting:{badge:"Urgent Review Recommended",badgeClass:"bg-amber-500/20 text-amber-300 border-amber-400/50",
+    Dog:"Dog • Repeated Vomiting: High dehydration risk if unable to hold water. Check gum moisture and abdominal tension. Generates Priority Case Packet for optional $49/$79 clinic review or local urgent care.",
+    Cat:"Cat • Repeated Vomiting: Multiple episodes in a few hours warrant prompt evaluation for foreign body or pancreatitis. Generates Priority Case Packet ready for clinic handoff."},
+  lethargy:{badge:"Same-Day / Urgent Check",badgeClass:"bg-amber-500/20 text-amber-300 border-amber-400/50",
+    Dog:"Dog • Sudden Lethargy: Track appetite, water intake, and gum color. Creates structured baseline Case Packet to monitor progression or request a $49/$79 partner consult.",
+    Cat:"Cat • Sudden Hiding/Lethargy: Cats mask pain until illness is advanced. Verify litter box output immediately; prepares Priority Case Packet for veterinary review."},
+  toxin:{badge:"Immediate ER Attention",badgeClass:"bg-rose-500/20 text-rose-300 border-rose-400/50",
+    Dog:"Dog • Possible Toxin Exposure: Time-critical window. Log exact substance, estimated amount, and pet weight in your Emergency Case Packet before heading to ER.",
+    Cat:"Cat • Possible Toxin/Plant Exposure: Lilies, human meds, and essential oils are rapidly toxic to cats. Generates Immediate ER Case Packet for front-desk handoff."},
+  limping:{badge:"Monitor / Routine Vet",badgeClass:"bg-emerald-500/20 text-emerald-300 border-emerald-400/50",
+    Dog:"Dog • Mild Limping/Minor Scrape: If weight-bearing with no active bleeding or swelling, restrict activity and log a baseline Case Packet for your regular vet.",
+    Cat:"Cat • Mild Limping: Restrict jumping for 12–24 hours and check paw pads. Saves symptom timestamp in your Case Packet in case swelling develops."}
+};
+function setSimSpecies(s){currentSimSpecies=s;
+  document.getElementById("simSpeciesDog").classList.toggle("on",s==="Dog");
+  document.getElementById("simSpeciesCat").classList.toggle("on",s==="Cat");renderSimOutput();}
+function selectSimSymptom(k){currentSimSymptom=k;
+  document.querySelectorAll(".sim-symptom-btn").forEach(b=>b.classList.toggle("on",b.dataset.symptom===k));renderSimOutput();}
+function renderSimOutput(){const sc=simScenarios[currentSimSymptom],b=document.getElementById("simUrgencyBadge");
+  b.textContent=sc.badge;b.className="ring rounded-full border px-3 py-1 text-xs font-extrabold "+sc.badgeClass;
+  document.getElementById("simGuidanceText").textContent=sc[currentSimSpecies];
+  document.getElementById("simPacketStatus").textContent="Packet #PSD-"+(8000+Math.floor(Math.random()*1999))+" Ready";}
+
+let activeAudience="b2c";
+function switchView(t){activeAudience=t;
+  const b2c=document.getElementById("b2cView"),b2b=document.getElementById("b2bView"),nav=document.getElementById("b2cNavLinks"),btn=document.getElementById("viewToggleBtn");
+  if(t==="b2b"){b2c.classList.add("hidden");b2b.classList.remove("hidden");nav.classList.add("invisible");btn.textContent="For Pet Owners";window.scrollTo({top:0,behavior:"smooth"});}
+  else{b2b.classList.add("hidden");b2c.classList.remove("hidden");nav.classList.remove("invisible");btn.textContent="For Veterinary Clinics";observeReveal();}}
+function toggleAudienceView(){switchView(activeAudience==="b2c"?"b2b":"b2c");}
+function toggleFaq(el){const body=el.nextElementSibling,icon=el.querySelector(".faq-icon"),hidden=body.classList.contains("hidden");
+  body.classList.toggle("hidden");icon.textContent=hidden?"−":"+";el.setAttribute("aria-expanded",hidden);}
+
+function openModal(id){const m=document.getElementById(id);m.classList.add("open");document.body.style.overflow="hidden";}
+function closeModal(id){document.getElementById(id).classList.remove("open");document.body.style.overflow="";}
+function openTriageModal(){document.getElementById("triageFormStep").classList.remove("hidden");document.getElementById("triageResultStep").classList.add("hidden");openModal("triageModal");}
+function openTriageModalWithSim(){openTriageModal();
+  document.getElementById("triagePetMeta").value=currentSimSpecies+" • Approx. Weight";
+  const map={vomiting:"Repeated Vomiting / Diarrhea",lethargy:"Sudden Lethargy / Hiding / Refusing Food",toxin:"Possible Toxin / Unknown Food Ingestion",limping:"Limping / Minor Wound / Eye Squinting"};
+  document.getElementById("triageConcern").value=map[currentSimSymptom]||"Pre-Crisis Setup (Save Profile Now)";}
+function closeTriageModal(){closeModal("triageModal");}
+function openChecklistModal(){document.getElementById("checklistFormStep").classList.remove("hidden");document.getElementById("checklistResultStep").classList.add("hidden");openModal("checklistModal");}
+function closeChecklistModal(){closeModal("checklistModal");}
+function switchChecklistToTriage(){closeChecklistModal();openTriageModal();}
+document.addEventListener("keydown",e=>{if(e.key==="Escape"){closeTriageModal();closeChecklistModal();}});
+document.querySelectorAll(".mdl").forEach(m=>m.addEventListener("click",e=>{if(e.target===m)closeModal(m.id);}));
+
+async function dispatchWebhook(p){if(!WEBHOOK_URL)return;try{await fetch(WEBHOOK_URL,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(p)});}catch(e){}}
+async function handleTriageSubmit(e){e.preventDefault();
+  const petName=document.getElementById("triagePetName").value.trim(),petMeta=document.getElementById("triagePetMeta").value.trim(),
+  concern=document.getElementById("triageConcern").value,email=document.getElementById("triageOwnerEmail").value.trim(),
+  packetId="PSD-"+Math.floor(100000+Math.random()*900000),timestamp=new Date().toLocaleString();
+  await dispatchWebhook({event:"digital_triage_pass_intent",packetId,petName,petMeta,concern,email,timestamp});
+  const summary=["PETSHIELD DISPATCH™ • EMERGENCY CASE PACKET","Packet ID: #"+packetId+" | Generated: "+timestamp,"Patient: "+petName+" ("+petMeta+")","Primary Intake Concern: "+concern,"Owner Contact: "+email,"Status: Digital Triage Pass ($1.99/mo) Queued • Ready for Partner Clinic Consult ($49/$79) or Direct ER Desk Handoff"].join("\n");
+  document.getElementById("generatedPacketOutput").textContent=summary;
+  document.getElementById("triageFormStep").classList.add("hidden");document.getElementById("triageResultStep").classList.remove("hidden");}
+async function handleChecklistSubmit(e){e.preventDefault();
+  const email=document.getElementById("checklistEmail").value.trim(),species=document.querySelector('input[name="checklistSpecies"]:checked').value;
+  await dispatchWebhook({event:"free_readiness_checklist_optin",species,email,timestamp:new Date().toISOString()});
+  document.getElementById("checklistFormStep").classList.add("hidden");document.getElementById("checklistResultStep").classList.remove("hidden");}
+async function handlePartnerSubmit(e){e.preventDefault();
+  const g=id=>document.getElementById(id).value.trim();
+  await dispatchWebhook({event:"b2b_veterinary_partner_inquiry",clinicName:g("partnerClinicName"),contactName:g("partnerContactName"),email:g("partnerEmail"),location:g("partnerLocation"),timestamp:new Date().toISOString()});
+  document.getElementById("partnerLeadForm").classList.add("hidden");document.getElementById("partnerSuccessBox").classList.remove("hidden");}
+
+function copyTextSafe(text,btn,label){
+  const done=()=>{if(btn){btn.textContent="Copied to Clipboard ✓";setTimeout(()=>{btn.textContent=label;},2200);}};
+  if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(done).catch(()=>{});return;}
+  const t=document.createElement("textarea");t.value=text;t.style.cssText="position:fixed;opacity:0";document.body.appendChild(t);t.select();
+  try{document.execCommand("copy");done();}catch(err){}document.body.removeChild(t);}
+function copySamplePacket(){copyTextSafe(document.getElementById("samplePacketArtifact").innerText,document.getElementById("copyPacketBtn"),"Copy Sample Clinic Brief");}
+function copyGeneratedPacket(){copyTextSafe(document.getElementById("generatedPacketOutput").innerText,document.getElementById("copyGenBtn"),"Copy Packet for Vet Desk");}
+
+/* Spotlight cards: pointer-tracked glow */
+document.addEventListener("pointermove",e=>{const c=e.target.closest&&e.target.closest(".spot");if(!c)return;const r=c.getBoundingClientRect();c.style.setProperty("--x",(e.clientX-r.left)+"px");c.style.setProperty("--y",(e.clientY-r.top)+"px");});
+/* Scroll reveal */
+let io;function observeReveal(){if(!("IntersectionObserver" in window)){document.querySelectorAll(".rv").forEach(n=>n.classList.add("in"));return;}
+  io=io||new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target);}}),{threshold:.12});
+  document.querySelectorAll(".rv:not(.in)").forEach((n,i)=>{n.style.transitionDelay=(i%3)*90+"ms";io.observe(n);});}
+observeReveal();
+</script>
+</body>
+</html>
